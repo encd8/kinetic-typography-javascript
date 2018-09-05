@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+body {
+    background:#00C7FF;
+    letter-spacing: 0.3ch;
+}
+/*
+    * Outer, middle, center technique from https://stackoverflow.com/a/6182661/450733
+    */
+#outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+    
+#middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+    
+#inner {
+    margin-left: auto;
+    margin-right: auto;
+    height:350px;
+    width:350px;
+    max-width: 350px;
+    max-height: 350px;
+    position: relative;
+}
+
+.screen {
+    width:100%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.screen-1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.letter {
+    display:inline-block;
+}
