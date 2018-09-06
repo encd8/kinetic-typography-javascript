@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Eczar');
 body {
+    overflow: hidden;
     background:#00C7FF;
-    letter-spacing: 0.3ch;
 }
 /*
     * Outer, middle, center technique from https://stackoverflow.com/a/6182661/450733
@@ -38,8 +38,14 @@ body {
 
 .screen-1 {
     font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    text-align: center;
+}
+
+.screen-1 h2:nth-of-type(1) {
+    transform:translateY(1.75rem);
+}
+
+.screen-2 {
+    font-family: 'Eczar', serif;
 }
 
 .letter {
