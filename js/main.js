@@ -33,13 +33,19 @@ $(function(){
         targets: '.screen-1 h2:nth-of-type(1)',
         fontSize: ['1.75rem', '1.25rem'], 
         elasticity:0,
+        duration:200,
     })
 
     // 'With html and CSS'
     main_tl.add({
-        targets: '.screen-1 h2:nth-of-type(2)',
+        targets: '.screen-1 h2:nth-of-type(2) .letter',
         opacity: [0,1],
-        translateY: ['450px', 0],
+        translateY: (el,i) => {
+            return [i*3+400, 0];
+        },
+        delay: (el, i) => {
+            return (i*25);
+        },
         easing: 'easeInElastic',
         elasticity: 0,
         offset: '-=750',

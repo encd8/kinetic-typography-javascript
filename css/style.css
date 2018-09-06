@@ -2,6 +2,7 @@
 body {
     overflow: hidden;
     background:#00C7FF;
+    font-size:20px;
 }
 /*
     * Outer, middle, center technique from https://stackoverflow.com/a/6182661/450733
