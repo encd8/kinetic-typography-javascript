@@ -41,7 +41,7 @@ body {
 }
 
 .screen-1 h2:nth-of-type(1) {
-    transform:translateY(1.75rem);
+    /*transform:translateY(1.75rem);*/
 }
 
 .screen-2 {

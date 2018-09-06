@@ -8,9 +8,11 @@ $(function(){
     /*
      * Screen 1
      */
+    // 'Kinetic Typography'
     main_tl.add({
         targets: '.screen-1 h2:nth-of-type(1) .letter',
         opacity:[0,1],
+        scale:[4,1],
         translateY: (el, i) => {
             return [-i-5+'px', 0];
         },
@@ -18,32 +20,35 @@ $(function(){
             return [30+i+'deg', 0];
         },
         delay: (el, i) => {
-            return (i*20);
+            if(i!=el.length){
+                return (i*20);
+            }
+            return i;
         },
         elasticity: 0,
     });
 
+    // Font size change
     main_tl.add({
         targets: '.screen-1 h2:nth-of-type(1)',
-        translateY: 0,
         fontSize: ['1.75rem', '1.25rem'], 
+        elasticity:0,
     })
 
+    // 'With html and CSS'
     main_tl.add({
-        targets: '.screen-1 h2:nth-of-type(2) .letter',
+        targets: '.screen-1 h2:nth-of-type(2)',
         opacity: [0,1],
-        translateY: (el,i) => {
-            return [i*15+'px', '0px'];
-        },
-        delay: (el,i) => {
-            return (i*12);
-        },
-        offset: '-=875',
+        translateY: ['450px', 0],
+        easing: 'easeInElastic',
+        elasticity: 0,
+        offset: '-=750',
     });
 
     main_tl.add({
-        targets: '.screen-1 h2:nth-of-type(3) .letter',
+        targets: '.screen-1 h2:nth-of-type(3), .screen-1 h2:nth-of-type(4)',
         opacity: [0,1],
+        translateX: ['300px', 0],
         rotateY: ['-180deg', '0deg']
     });
 
@@ -80,13 +85,12 @@ $(function(){
      })
 
      main_tl.add({
-        targets: '.screen-2 h2:nth-of-type(2) .letter',
-        scale: [1,0],
-        translateY: (el,i) => {
-            return [0, -i+'px'];
-        },
+        targets: '.screen-2 h2:nth-of-type(2)',
+        scale: [1,4],
+        opacity: [1, 0],
+        duration: 350,
         delay: 650,
-        easing: 'easeInOutQuint'
+        elasticity:0
 
      })
 
@@ -95,7 +99,7 @@ $(function(){
         opacity: [1,0],
         translateX: ['0px', '-100px'],
         elasticity: 0,
-        offset: '-=650'
+        offset: '-=350'
      })
 
      main_tl.add({
